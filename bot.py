@@ -18,9 +18,9 @@ intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=prefix, case_insensitive=True, intents=intents)
 bot.remove_command('help')
 
-administrators = []
-chat_channel = ''
-bots_channel = ''
+administrators = [499218322261540865]
+chat_channel = '1220116023165063229'
+bots_channel = '1220116788873007257'
 queue = []
 
 def zoom():
@@ -144,38 +144,38 @@ async def tfollow(ctx, channel, amount: int=None):
                     max_amount = 0
                     if ctx.author.id in administrators:
                         tfollow.reset_cooldown(ctx)
-                        max_amount += 1000
+                        max_amount += 10000
                     premium = discord.utils.get(ctx.guild.roles, name='Premium')
                     if premium in ctx.author.roles:
-                        max_amount += 1000
+                        max_amount += 10000
                     diamond = discord.utils.get(ctx.guild.roles, name='Diamond')
                     if diamond in ctx.author.roles:
-                        max_amount += 750
+                        max_amount += 7500
                     gold = discord.utils.get(ctx.guild.roles, name='Gold')
                     if gold in ctx.author.roles:
-                        max_amount += 450
+                        max_amount += 4500
                     silver = discord.utils.get(ctx.guild.roles, name='Silver')
                     if silver in ctx.author.roles:
-                        max_amount += 250
+                        max_amount += 2500
                     bronze = discord.utils.get(ctx.guild.roles, name='Bronze')
                     if bronze in ctx.author.roles:
-                        max_amount += 100
+                        max_amount += 1000
                     booster = discord.utils.get(ctx.guild.roles, name='Booster')
                     if booster in ctx.author.roles:
-                        max_amount += 75
+                        max_amount += 750
                     _75 = discord.utils.get(ctx.guild.roles, name='+75')
                     if _75 in ctx.author.roles:
-                        max_amount += 75
+                        max_amount += 750
                     _25 = discord.utils.get(ctx.guild.roles, name='+25')
                     if _25 in ctx.author.roles:
-                        max_amount += 25
+                        max_amount += 250
                     _10 = discord.utils.get(ctx.guild.roles, name='+10')
                     if _10 in ctx.author.roles:
-                        max_amount += 10
+                        max_amount += 100
                     _5 = discord.utils.get(ctx.guild.roles, name='+5')
                     if _5 in ctx.author.roles:
-                        max_amount += 5
-                    max_amount += 25
+                        max_amount += 50
+                    max_amount += 250
                     if amount is None:
                         amount = max_amount
                     elif amount > max_amount:
